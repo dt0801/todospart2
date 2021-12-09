@@ -62,9 +62,11 @@ function vote(index) {
 }
 function vote2(index) {
     // giam so like cho nguoi choi co vi tri la index
-    dsVoter[index].likes--;
-
-    render(dsVoter)
+    if(dsVoter[index].likes > 0){
+        dsVoter[index].likes--;
+        render(dsVoter)
+    }
+    
 
 }
  // xoa nguoi choi
